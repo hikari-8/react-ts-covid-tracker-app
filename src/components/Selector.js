@@ -5,21 +5,24 @@ export const Selector =()=> {
     const[selectedCountry, setSelectedCountry] = useState("");
     const onCangeSelectCountry =(e)=> setSelectedCountry(e.target.value)
     const getCountryData = ()=>{
-        fetch()
+        fetch(`https://api.covid19api.com/country/${selectedCountry}`)
+        .then(res => res.json()
+        .then(data => console.log(data))
+        )
 
     }
 
     return(
         <div>
             <select onChange={onCangeSelectCountry}>
-                { countriesJson.map((country, index) => 
-                    <option key={index} value={country.Slug}>{country.Country}</option>
-                )}
+                <option>Select A Country</option>
+                    { countriesJson.map((country, index) => 
+                        <option key={index} value={country.Slug}>{country.Country}</option>
+                    )}
             </select>
 
             <option onChange={getCountryData}></option>
-
-            {selectedCountry}
+            <button onClick={getCountryData}>Get Data</button>
 
         </div>
     );
