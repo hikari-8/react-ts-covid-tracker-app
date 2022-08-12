@@ -5,7 +5,7 @@ export const Selector =(props)=> {
     const onCangeSelectCountry =(e)=> setSelectedCountry(e.target.value)
 
     return(
-        <div>
+        <div className="selector-container">
             <select onChange={onCangeSelectCountry}>
                 <option>Select A Country</option>
                     {countriesJson.map((country, index) => 
