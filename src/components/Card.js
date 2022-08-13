@@ -1,6 +1,5 @@
 
-export const Card = (props)=> {
-    const {allCountriesData} = props;
+export const Card = ({allCountriesData})=> {
     return(
         <div className="card-container">
             {allCountriesData.map((singleData, index)=>

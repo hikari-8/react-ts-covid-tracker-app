@@ -3,8 +3,7 @@ import { Selector } from '../components/Selector';
 import { Results } from '../components/Results';
 import { Header } from '../components/Header';
 
-export const TopPage =(props)=> {
-    const {countriesJson, setSelectedCountry, getCountryData, countryData}=props;
+export const TopPage =({countriesJson, setSelectedCountry, getCountryData, countryData})=> {
     return(
         <div className="top-page-container">
             <div>

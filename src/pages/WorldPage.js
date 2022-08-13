@@ -2,8 +2,7 @@ import { Card } from '../components/Card';
 import { Title } from '../components/Title';
 import { Header } from '../components/Header';
 
-export const WorldPage =(props)=> {
-    const {allCountriesData} = props;
+export const WorldPage =({allCountriesData})=> {
     return(
         <div className="world-page-container">
         <Header />

@@ -1,7 +1,7 @@
 
 
-export const Selector =(props)=> {
-    const {countriesJson, setSelectedCountry, getCountryData} = props;
+export const Selector =({countriesJson, setSelectedCountry, getCountryData})=> {
+    
     const onCangeSelectCountry =(e)=> setSelectedCountry(e.target.value)
 
     return(
