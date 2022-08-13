@@ -4,20 +4,25 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { TopPage } from './pages/TopPage';
 import { WorldPage } from './pages/WorldPage';
 import './App.css';
+import { CountryDataType, AllCountriesDataType } from "./types";
+
 
 function App() {
-  const [loading, setLoading] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState("japan");
-  const [countryData, setCountryData] = useState({
+  const [loading, setLoading] = useState<boolean>(false);
+  const [selectedCountry, setSelectedCountry] = useState<string>("japan");
+  const [countryData, setCountryData] = useState<CountryDataType>({
         date: "",
-        newConfirmed: "",
-        totalConfirmed: "",
-        newRecovered: "",
-        totalRecovered: "",
+        newConfirmed: 0,
+        totalConfirmed: 0,
+        newRecovered: 0,
+        totalRecovered: 0,
   });
 
-  const [allCountriesData, setAllCountriesData] = useState([]);
-
+  const [allCountriesData, setAllCountriesData] = useState<AllCountriesDataType>([{
+    Country: "",
+    NewConfirmed: 0,
+    TotalConfirmed: 0,
+  }]);
 
 
 

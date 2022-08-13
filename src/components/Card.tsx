@@ -1,5 +1,6 @@
+import { CardType } from "../types";
 
-export const Card = ({allCountriesData})=> {
+export const Card = ({allCountriesData}: CardType)=> {
     return(
         <div className="card-container">
             {allCountriesData.map((singleData, index)=>
