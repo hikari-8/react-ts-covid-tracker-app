@@ -3,16 +3,15 @@ import { Selector } from '../components/Selector';
 import { Results } from '../components/Results';
 import { Header } from '../components/Header';
 
-export const TopPage =({countriesJson, setSelectedCountry, getCountryData, countryData})=> {
+export const TopPage =({countriesJson, setSelectedCountry, countryData, loading})=> {
     return(
         <div className="top-page-container">
             <div>
                 <Header />
                 <Title />
                 <Selector countriesJson={countriesJson} 
-                            setSelectedCountry={setSelectedCountry} 
-                            getCountryData={getCountryData} />
-                <Results countryData={countryData}/>
+                            setSelectedCountry={setSelectedCountry} />
+                <Results countryData={countryData} loading={loading} />
             </div>
         </div>
     );
